@@ -1,0 +1,476 @@
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+:root {
+    --principal: #162940;
+    --secundario: #1879c9;
+    --fondo: #f1f5f9;
+    --blanco: #ffffff;
+    --texto: #334155;
+    --borde: #dbe3ec;
+    --sombra: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+/* ===== ENCABEZADO ===== */
+body > header {
+    background: linear-gradient(135deg, #162940, #254d75);
+    color: white;
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+body > header figure {
+    margin-bottom: 15px;
+}
+
+body > header img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--secundario);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+body > header p {
+    max-width: 650px;
+    margin: 8px auto;
+}
+
+body > header strong {
+    color: #78c5ff;
+    font-size: 1.2rem;
+}
+
+/* ===== MENÚ ===== */
+body > header nav {
+    margin-top: 30px;
+}
+
+body > header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+body > header nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+body > header nav a:hover {
+    background: var(--secundario);
+    transform: translateY(-3px);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+main > section,
+main > aside {
+    background: var(--blanco);
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--borde);
+}
+
+main > section:hover,
+main > aside:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+h2 {
+    color: var(--principal);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secundario);
+}
+
+h3 {
+    color: var(--secundario);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+article {
+    margin-bottom: 22px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+main ul,
+main ol {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 7px;
+}
+
+mark {
+    background: #dbeafe;
+    color: #174c82;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* ===== DATOS PERSONALES ===== */
+#datos dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px 20px;
+}
+
+#datos dt {
+    font-weight: bold;
+    color: var(--principal);
+}
+
+#datos dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* ===== EXPERIENCIA Y EDUCACIÓN ===== */
+#experiencia article,
+#educacion article,
+#proyectos article {
+    border-left: 4px solid var(--secundario);
+    padding: 15px 20px;
+    background: #f8fafc;
+    border-radius: 0 10px 10px 0;
+}
+
+/* ===== HABILIDADES ===== */
+#habilidades article {
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+#habilidades progress {
+    width: 100%;
+    height: 14px;
+    display: block;
+    margin: 8px 0 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #dbe3ec;
+    accent-color: var(--secundario);
+}
+
+progress::-webkit-progress-bar {
+    background: #dbe3ec;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #1879c9, #46b1ff);
+    border-radius: 20px;
+}
+
+progress::-moz-progress-bar {
+    background: #1879c9;
+    border-radius: 20px;
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border: 1px solid var(--borde);
+}
+
+th {
+    background: var(--principal);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+tbody tr:hover {
+    background: #e0f2fe;
+}
+
+/* ===== INFORMACIÓN ADICIONAL ===== */
+details {
+    margin: 12px 0;
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--principal);
+}
+
+details p {
+    margin-top: 12px;
+}
+
+/* ===== CONTACTO ===== */
+a {
+    color: var(--secundario);
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #0c4f87;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--principal);
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+form input:not([type="checkbox"]),
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+    background: white;
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--secundario);
+    box-shadow: 0 0 0 3px rgba(24, 121, 201, 0.15);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    accent-color: var(--secundario);
+}
+
+form input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
+
+button {
+    background: var(--secundario);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 8px 5px 0;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #105b98;
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background: #64748b;
+}
+
+button[type="reset"]:hover {
+    background: #475569;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+body > footer {
+    background: var(--principal);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+body > footer a {
+    color: #78c5ff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+body > footer a:hover {
+    color: white;
+}
+
+body > footer small {
+    color: #cbd5e1;
+}
+
+/* ===== ACCESIBILIDAD ===== */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body > header {
+        padding: 30px 15px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    body > header img {
+        width: 135px;
+        height: 135px;
+    }
+
+    body > header nav ul {
+        gap: 5px;
+    }
+
+    body > header nav a {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    main > section,
+    main > aside {
+        padding: 20px;
+    }
+
+    #datos dl {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    #datos dd {
+        margin-bottom: 12px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    main > section,
+    main > aside {
+        padding: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
